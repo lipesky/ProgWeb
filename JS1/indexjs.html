@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style>
+			.entrada{
+				width: 10%;
+			}
+		</style>
+		<script language="javascript">
+			var img = new Image();
+			img.src = "http://sweetcharmbijoux.com.br/wp-content/uploads/2016/01/vermelho18.jpg";
+			function desenhaGrafico(){
+				document.getElementById("a").innerHTML = "<img id=\"imagem1\" src=\"\">&nbsp;<img id=\"imagem2\" src=\"\">&nbsp;<img id=\"imagem3\" src=\"\">&nbsp;<img id=\"imagem4\" src=\"\">&nbsp;<img id=\"imagem5\" src=\"\">";
+				document.getElementById("imagem1").src = img.src;
+				document.getElementById("imagem2").src = img.src;
+				document.getElementById("imagem3").src = img.src;
+				document.getElementById("imagem4").src = img.src;
+				document.getElementById("imagem5").src = img.src;
+
+				document.getElementById("imagem1").width = document.formulario.largura.value;
+				document.getElementById("imagem2").width = document.formulario.largura.value;
+				document.getElementById("imagem3").width = document.formulario.largura.value;
+				document.getElementById("imagem4").width = document.formulario.largura.value;
+				document.getElementById("imagem5").width = document.formulario.largura.value;
+
+				document.getElementById("imagem1").height = document.formulario.in1.value;
+				document.getElementById("imagem2").height = document.formulario.in2.value;
+				document.getElementById("imagem3").height = document.formulario.in3.value;
+				document.getElementById("imagem4").height = document.formulario.in4.value;
+				document.getElementById("imagem5").height = document.formulario.in5.value;
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Um gráfico de barras usando imagens</h1><br>
+			<form name="formulario">
+				Informe a altura das barras: <input type="text" name="in1" class="entrada"> <input type="text" name="in2" class="entrada"> <input type="text" name="in3" class="entrada" > <input type="text" name="in4" class="entrada"> <input type="text" name="in5" class="entrada"><br>
+				Informe a largura das barras (em pixels): <input type="text" name="largura" class="entrada"><br>
+				<input type="button" value="Desenhe o gráfico" onclick="desenhaGrafico()" >
+			</form>
+			<div name="grafico" id="a">
+				
+			</div>
+	</body>
+<html>
