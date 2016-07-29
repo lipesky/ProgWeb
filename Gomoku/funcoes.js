@@ -1,4 +1,4 @@
-function iniciar(){
+		function iniciar(){
 			atualizaVez();
 			document.getElementById("tabuleiro").setAttribute("style", ("background-color: lightgray; border: 5px solid black; width: "+(nlinhas * 60)+"px; heigth: "+(ncolunas * 60)+"px; border-radius: 30px; padding-top: 20px; padding-right: 0px; padding-bottom: 20px; padding-left: 20px; margin:auto;"));
 			var id = 1;

@@ -3,7 +3,7 @@
 	<meta charset="UTF-8" />
 	<title>Gomoku</title>
 	<style>
-	
+		
 		.celula{
 			width: 50px;
 			heigth: 50px;
@@ -13,36 +13,60 @@
 			padding-left: 4px;
 		}
 		.botao{
+			text-shadow: 0 0 5px white;
+			height: 50px;
 			width :65%;
 			margin-left:17%;
 			color: purple;
 			background-color: lightblue;
 			border-radius: 25px;
+			font-size: 25px;
+			font-family:Comic Sans MS;
+			font-weight: bold;
+		}
+		.botao:hover{
+			background-color: #9999ff;
+		}
+		.botao:active{
+			box-shadow: 0 5px #666;
+			transform: translateY(4px);
 		}
 		.titulo{
+			color: yellow;
 			text-align: center;
+			text-shadow: 0 0 5px black;
 		}
 		.prgf{
+			text-align: justify;
+			text-indent: 50px;
+			text-shadow: 0 0 4px black;
 			padding: 20px;
-			font-family:Book Antiqua;
+			font-family:Comic Sans MS;
+			color: yellow;
 		}
 		.tabela{
 			margin: auto;
 		}
 		.tabledata{
+			color: yellow;
+			font-weight: bold;
+			font-family:Comic Sans MS;
+			text-decoration: bold;
+			text-align: center;
 			padding-bottom:10px;
 			padding-left:50px;
 			padding-right:50px;
 			padding-top:px;
+			text-shadow: 0 0 4px black;
 		}
 
 	</style>
 	<script src="funcoes.js"></script>
 	
 </head>
-<body>
+<body style="background-image: url(temas/wallpaper.jpg);">
 	<h1 class="titulo">Gomoku</h1>
-	<p class="prgf" style="font-family:Book Antiqua;"><b>O Gomoku, também conhecido como Gobang, é um jogo de tabuleiro estratégico tradicionalmente jogado com peças de Go (peças negras e brancas) em um tabuleiro de Go ligeiramente modificado (15x15 interseções). No entanto, ao contrario deste, uma vez que as peças são colocadas não podem ser movidas ou retiradas do tabuleiro. No inicio do jogo, as negras começam, e os jogadores alternam na colocação de uma pedra da sua cor em uma interseção vazia. O vencedor é o primeiro jogador a obter uma linha ininterrupta de cinco pedras na horizontal, vertical ou diagonal.</b></p>
+	<p class="prgf"><b>O Gomoku, também conhecido como Gobang, é um jogo de tabuleiro estratégico tradicionalmente jogado com peças de Go (peças negras e brancas) em um tabuleiro de Go ligeiramente modificado (15x15 interseções). No entanto, ao contrario deste, uma vez que as peças são colocadas não podem ser movidas ou retiradas do tabuleiro. No inicio do jogo, as negras começam, e os jogadores alternam na colocação de uma pedra da sua cor em uma interseção vazia. O vencedor é o primeiro jogador a obter uma linha ininterrupta de cinco pedras na horizontal, vertical ou diagonal.</b></p>
 	<input type="button" onclick="iniciar()" value="Iniciar" class="botao">
 	<div>
 		<table class="tabela">
@@ -60,7 +84,7 @@
 				<td style="float: right;" class="tabledata">
 					Jogador da vez<br>
 					<div style="padding: 5px;"><img id="vez" class="celula"><br>
-					<p id="player"><strong>Lorem Ipsum</strong></p></div>
+					<p id="player" style="font-family:Comic Sans MS;"></p></div>
 				</td>
 			</tr>
 		</table>
@@ -69,15 +93,13 @@
 	<script language="JavaScript">
 		nlinhas = 15;
 		ncolunas = 15;
-		/* superman == true && batman == false */
+		/* player1 == true && player2 == false */
 		caraDaVez = true;
 		emptyCell = new Image();
 		emptyCell.src = "temas/CelulaVazia.jpg";
 		xCell = new Image();
-		//xCell.src = "superman.jpg";
 		oCell = new Image();
 		atualizaTema();
 		atualizaVez();
-		//oCell.src = "batman.jpg";
 	</script>
 </body>
